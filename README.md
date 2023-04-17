@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/kwonmoon/single-page-design-portfolio)
-- Live Site URL: [Netlify]()
+- Live Site URL: [Netlify](https://gregarious-biscuit-5bf221.netlify.app/)
 
 ## My process
 
