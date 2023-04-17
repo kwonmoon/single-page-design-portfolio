@@ -1,0 +1,76 @@
+@use "../util" as u;
+
+.slide {
+   width: 100%;
+   margin-bottom: u.rem(88);
+   padding-inline: 0;
+   overflow: hidden;
+
+   @include u.breakpoint-down(medium) {
+      margin-bottom: u.rem(120);
+   }
+
+   @include u.breakpoint-down(small) {
+      margin-bottom: u.rem(100);
+   }
+   
+   &__title {
+      font-size: u.rem(32);
+      line-height: 1.26;
+      text-align: center;
+      margin-bottom: u.rem(56);
+   
+      @include u.breakpoint-down(small) {
+         font-size: u.rem(24);
+         margin-bottom: u.rem(32);
+      }      
+   }
+
+   &__carousel {
+      transition: all 0.5s ease-in-out;
+      margin-bottom: u.rem(56);
+   
+      @include u.breakpoint-down(small) {
+         margin-bottom: u.rem(32);
+      }      
+      
+      &__images {
+         gap: u.rem(30);
+
+         @include u.breakpoint-down(small) {
+            gap: u.rem(15);
+         }
+         
+         & img {
+            width: u.rem(540);
+            height: u.rem(360);
+            border-radius: u.rem(10);
+            object-fit: cover;
+            
+            @include u.breakpoint-down(small) {
+               width: u.rem(270);
+               height: auto;
+            }      
+         }
+      }
+   }
+   
+   &__arrow {
+      gap: u.rem(16);
+      justify-content: center;
+
+      &__left,
+      &__right {
+         background-color: hsl( var(--color-black) );
+         width: u.rem(64);
+         border-radius: 50%;
+         padding: u.rem(24);
+      }
+
+      &__left:hover,
+      &__right:hover {
+         cursor: pointer;
+         background-color: hsl( var(--color-galactic-blue) );
+      }
+   }
+}

@@ -1,0 +1,75 @@
+@use "../util" as u;
+
+.contact {
+   margin-bottom: u.rem(56);
+   
+   @include u.breakpoint-down(small) {
+      margin-bottom: u.rem(40);
+   }
+   
+   &__container {
+      gap: u.rem(182);
+      align-items: center;
+      background-color: hsl( var(--color-black));
+      color: hsl( var(--color-light-cream));
+      border-radius: u.rem(10);
+      padding: u.rem(81) u.rem(95) u.rem(80) u.rem(65);
+      
+      @include u.breakpoint-down(medium) {
+         display: block;
+         text-align: center;
+         padding: u.rem(56) u.rem(75) u.rem(64);
+      }
+
+      @include u.breakpoint-down(small) {
+         padding: u.rem(49) u.rem(24) u.rem(48);
+      }
+
+      &__title {
+         margin-bottom: u.rem(25);
+         
+         @include u.breakpoint-down(medium) {
+            font-size: u.rem(32);
+            margin-bottom: u.rem(27);
+         }
+         
+         @include u.breakpoint-down(small) {
+            font-size: u.rem(26);
+            margin-bottom: u.rem(24);
+         }
+      }
+
+      &__description {
+         @include u.breakpoint-down(medium) {
+            margin-bottom: u.rem(26);
+         }
+
+         @include u.breakpoint-down(small) {
+            font-size: u.rem(16);
+            line-height: 1.625;
+            margin-bottom: u.rem(24);
+         }
+      }
+
+      &__button {
+         flex-basis: 49%;
+         background-color: hsl( var(--color-light-red) );
+         color: hsl( var(--color-light-cream));
+         font-size: u.rem(16);
+         font-weight: 700;
+         line-height: 1.75;
+         border-radius: u.rem(28);
+         padding: u.rem(14) u.rem(45);
+         
+         &:hover {
+            background-color: hsl( var(--color-summer-yellow) );
+         }
+         
+         @include u.breakpoint-down(small) {
+            font-size: u.rem(14);
+            line-height: 2;
+            padding: u.rem(8) u.rem(28);
+         }   
+      }
+   }
+}

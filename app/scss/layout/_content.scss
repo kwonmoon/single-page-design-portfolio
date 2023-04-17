@@ -1,0 +1,44 @@
+@use "../util" as u;
+
+.content {
+   text-align: center;
+   margin-bottom: u.rem(80);
+
+   @include u.breakpoint-down(medium) {
+      margin-bottom: u.rem(64);
+   }
+
+   @include u.breakpoint-down(small) {
+      margin-bottom: u.rem(32);
+   }
+
+   &__title {
+      line-height: 1.26;
+      margin-bottom: u.rem(23);
+      
+      @include u.breakpoint-down(medium) {
+         font-size: u.rem(44);
+         margin-bottom: u.rem(27);
+      }
+      
+      @include u.breakpoint-down(small) {
+         font-size: u.rem(36);
+         margin-bottom: u.rem(16);
+      }
+   }
+
+   &__description {
+      color: hsl( var(--color-medium-brown) );
+      padding-inline: u.rem(182);
+      
+      @include u.breakpoint-down(medium) {
+         padding-inline: u.rem(50);
+      }
+
+      @include u.breakpoint-down(small) {
+         font-size: u.rem(16);
+         line-height: 1.625;
+         padding-inline: u.rem(30);
+      }
+   }
+}

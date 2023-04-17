@@ -1,0 +1,41 @@
+@use "../util" as u;
+
+.footer {
+   justify-content: space-between;
+   align-items: center;
+   margin-top: u.rem(34);
+   padding-bottom: u.rem(64);
+
+   @include u.breakpoint-down(medium) {
+      padding-bottom: u.rem(56);
+   }
+
+   @include u.breakpoint-down(small) {
+      padding-bottom: u.rem(32);
+   }
+
+   &__logo {
+      @include u.breakpoint-down(small) {
+         max-width: u.rem(48);
+      }
+   }
+
+   &__button {
+      font-weight: 700;
+      background-color: hsl( var(--color-black) );
+      color: hsl( var(--color-light-cream) );
+      border-radius: u.rem(28);
+      padding: u.rem(14) u.rem(45);
+      
+      @include u.breakpoint-down(small) {
+         font-size: u.rem(14);
+         line-height: 2;
+         padding: u.rem(8) u.rem(28);
+      }
+
+      &:hover {
+         cursor: pointer;
+         background-color:hsl( var(--color-galactic-blue) );
+      }
+   }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+   <link rel="stylesheet" href="./dist/style.css">
+   <title>Frontend Mentor | Single-page design portfolio</title>
+</head>
+<body>
+   <header class="header wrapper flex">
+      <img src="./assets/logo.svg" alt="company logo" class="header__logo">
+      <button class="header__button">Free Consultation</button>
+   </header>
+   <main>
+      <section class="content wrapper">
+         <h1 class="content__title">Design solutions made easy</h1>
+         <p class="content__description">
+            With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.
+         </p>
+      </section>
+      <section class="portfolio wrapper grid">
+         <div class="portfolio__graphic portfolio__wrapper flex">
+            <img
+               class="portfolio__img"
+               src="./assets/pattern-graphic-design.svg"
+               alt="picture for graphic design"
+               width="128"
+               height="192"
+            >
+            <p class="portfolio__desc">Graphic Design</p>
+         </div>
+         <div class="portfolio__uiux portfolio__wrapper flex">
+            <img
+               class="portfolio__img"
+               src="./assets/pattern-ui-ux.svg"
+               alt="picture for ui/ux"
+               width="64"
+               height="64"
+            >
+            <p class="portfolio__desc">UI/UX</p>
+         </div>
+         <div class="portfolio__apps portfolio__wrapper flex">
+            <img
+               class="portfolio__img"
+               src="./assets/pattern-apps.svg"
+               alt="picture for applications"
+               width="64"
+               height="64"
+            >
+            <p class="portfolio__desc">Apps</p>
+         </div>
+         <div class="portfolio__photo portfolio__wrapper flex">
+            <img
+               class="portfolio__img"
+               src="./assets/pattern-photography.svg"
+               alt="picture for photography"
+               width="160"
+               height="64"
+            >
+            <p class="portfolio__desc">Photography</p>
+         </div>
+         <div class="portfolio__illust portfolio__wrapper flex">
+            <img
+               class="portfolio__img"
+               src="./assets/pattern-illustrations.svg"
+               alt="picture for illustrations"
+               width="128"
+               height="64"
+            >
+            <p class="portfolio__desc">Illustrations</p>
+         </div>
+         <div class="portfolio__motion portfolio__wrapper flex">
+            <img
+               class="portfolio__img"
+               src="./assets/pattern-motion-graphics.svg"
+               alt="picture for motion graphics"
+               width="128"
+               height="64"
+            >
+            <p class="portfolio__desc">Motion Graphics</p>
+         </div>
+      </section>
+      <section class="hero wrapper flex">
+         <img
+            class="hero__image"
+            src="./assets/image-amy.webp"
+            alt="picture of amy"
+            width="445"
+            height="445"
+         >
+         <div class="hero__wrapper">
+            <h2 class="hero__title">I’m Amy, and I’d love to work on your next project</h2>
+            <p class="hero__description">
+               I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations 
+               to complete mobile apps. I’m also handy with a camera!
+            </p>
+            <button class="hero__button">Free Consultation</button>
+         </div>
+      </section>
+      <section class="slide wrapper">
+         <h2 class="slide__title">My Work</h2>
+         <div class="slide__carousel">
+           <div class="slide__carousel__images flex">
+            <img src="./assets/image-slide-5.jpg" alt="slide">
+            <img src="./assets/image-slide-1.jpg" alt="slide">
+            <img src="./assets/image-slide-2.jpg" alt="slide">
+            <img src="./assets/image-slide-3.jpg" alt="slide">
+            <img src="./assets/image-slide-4.jpg" alt="slide">
+           </div>
+         </div>
+         <div class="slide__arrow flex">
+            <button class="slide__arrow__left">
+               <img
+                  src="./assets/icon-arrow-left.svg"
+                  alt="left arrow icon"
+               >
+            </button>
+            <button class="slide__arrow__right">
+               <img
+                  src="./assets/icon-arrow-right.svg"
+                  alt="right arrow icon"
+               >
+            </button>
+         </div>
+      </section>      
+      <section class="contact wrapper">
+         <div class="contact__container flex">
+            <div>
+               <h2 class="contact__container__title">Book a call with me</h2>
+               <p class="contact__container__description">
+                  I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a 
+                  free consultation. Then we can move forward from there.
+               </p>
+            </div>
+            <button class="contact__container__button">Free Consultation</button>
+         </div>
+      </section>
+   </main>
+   <footer class="footer wrapper flex">
+      <img src="./assets/logo.svg" alt="company logo" class="footer__logo">
+      <button class="footer__button">Free Consultation</button>
+   </footer>
+
+   <script src="./app/js/app.js" defer></script>
+</body>
+</html>

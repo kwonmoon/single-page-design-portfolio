@@ -1,0 +1,79 @@
+@use "../util" as u;
+
+.portfolio {
+   grid-template-areas:
+      "graphic graphic ui-ux apps photo photo"
+      "graphic graphic illust illust motion motion";
+   gap: u.rem(24) u.rem(24);
+   height: u.rem(364);
+   margin-bottom: u.rem(136);
+
+   @include u.breakpoint-down(medium) {
+      grid-template-areas:
+         "graphic graphic ui-ux apps"
+         "graphic graphic illust illust"
+         "photo photo motion motion";
+      height: u.rem(570);
+      margin-bottom: u.rem(120);
+   }
+   
+   @include u.breakpoint-down(small) {
+      grid-template-areas:
+         "graphic graphic"
+         "graphic graphic"
+         "ui-ux apps"
+         "illust illust"
+         "photo photo"
+         "motion motion";
+      height: u.rem(1164);
+      margin-bottom: u.rem(100);     
+   }
+
+   &__wrapper {
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: u.rem(8);
+      padding: u.rem(24);
+   }
+   
+   &__img {
+      align-self: flex-end;
+   }
+
+   &__desc {
+      font-size: u.rem(24);
+      font-weight: 700;
+      line-height: 1.26;
+      color: hsl( var(--color-white) );
+   }
+
+   &__graphic {
+      grid-area: graphic;
+      background-color: hsl( var(--color-galactic-blue) );
+   }
+
+   &__uiux {
+      grid-area: ui-ux;
+      background-color: hsl( var(--color-summer-yellow) );
+   }
+
+   &__apps {
+      grid-area: apps;
+      background-color: hsl( var(--color-pink) );
+   }
+
+   &__photo {
+      grid-area: photo;
+      background-color: hsl( var(--color-cyan) );
+   }
+
+   &__illust {
+      grid-area: illust;
+      background-color: hsl( var(--color-light-red) );
+   }
+
+   &__motion {
+      grid-area: motion;
+      background-color: hsl( var(--color-dark-purple) );
+   }
+}
